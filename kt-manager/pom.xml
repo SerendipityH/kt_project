@@ -17,4 +17,10 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+	<modules>
+		<module>kt-manager-pojo</module>
+		<module>ke-manager-dao</module>
+		<module>kt-manager-interface</module>
+		<module>kt-manager-service</module>
+	</modules>
 </project>
