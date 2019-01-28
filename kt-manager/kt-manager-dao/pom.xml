@@ -2,15 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.serendipity</groupId>
-    <artifactId>kt-parent</artifactId>
+    <artifactId>kt-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.serendipity</groupId>
-  <artifactId>kt-manager</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>kt-manager-pojo</module>
-  	<module>kt-manager-dao</module>
-  </modules>
+  <artifactId>kt-manager-dao</artifactId>
 </project>
