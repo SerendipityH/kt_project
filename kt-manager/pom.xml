@@ -22,9 +22,9 @@
 		<module>kt-manager-interface</module>
 		<module>kt-manager-service</module>
 	</modules>
+	<!-- 配置Tomcat插件 -->
 	<build>
 		<plugins>
-			<!-- 配置Tomcat插件 -->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
