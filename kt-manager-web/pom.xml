@@ -4,21 +4,31 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.serendipity</groupId>
-		<artifactId>kt-manager</artifactId>
+		<artifactId>kt-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	<artifactId>kt-manager-web</artifactId>
 	<packaging>war</packaging>
-	<artifactId>kt-manager-service</artifactId>
 	<dependencies>
-		<dependency>
-			<groupId>com.serendipity</groupId>
-			<artifactId>kt-manager-dao</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>com.serendipity</groupId>
 			<artifactId>kt-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- JSP相关 -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<!-- Spring -->
 		<dependency>

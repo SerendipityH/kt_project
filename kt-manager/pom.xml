@@ -21,7 +21,6 @@
 		<module>kt-manager-dao</module>
 		<module>kt-manager-interface</module>
 		<module>kt-manager-service</module>
-		<module>kt-manager-web</module>
 	</modules>
 	<build>
 		<plugins>
