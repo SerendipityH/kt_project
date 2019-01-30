@@ -1,11 +1,10 @@
 package com.serendipity.pojo;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class TbContentCategoryExample implements Serializable {
+public class TbContentCategoryExample  {
     protected String orderByClause;
 
     protected boolean distinct;
