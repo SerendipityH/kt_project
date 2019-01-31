@@ -18,6 +18,9 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	<!-- 配置资源映射 -->
+	<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
+	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="kt-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="172.16.2.52:2181"/>	
