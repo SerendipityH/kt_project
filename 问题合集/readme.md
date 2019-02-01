@@ -10,6 +10,6 @@ Error creating bean with name 'sqlSessionFactory' defined in file [C:\Users\Admi
 本来以为是applicationContext-dao.xml这个文件出错了,后来才发现是这个配置文件中出错了  
  ![iamge](https://github.com/SerendipityH/kt_project/blob/master/%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/photo/menu.saveimg.savepath20190131140304.jpg）  
 解决：修改SqlMapConfig.xml
-![image](https://github.com/SerendipityH/kt_project/blob/master/%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/photo/menu.saveimg.savepath20190201101157.jpg)  
+![image](https://github.com/SerendipityH/kt_project/blob/master/%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/photo/menu.saveimg.savepath20190201104824.jpg)  
 改为  
 ![iamge](https://github.com/SerendipityH/kt_project/blob/master/%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/photo/menu.saveimg.savepath20190201101228.jpg)
