@@ -5,8 +5,7 @@
 执行关闭命令： systemctl stop firewalld.service  
 执行开机禁用防火墙自启命令  ： systemctl disable firewalld.service
 
-
-2. 出现错误:  
+2.出现错误
 
 本来以为是applicationContext-dao.xml这个文件出错了,后来才发现是
 
