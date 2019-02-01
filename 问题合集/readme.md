@@ -6,6 +6,7 @@
 执行开机禁用防火墙自启命令  ： systemctl disable firewalld.service
 
 
-2. 出现错误Error creating bean with name 'sqlSessionFactory' defined in file [C:\Users\Administrator\git\kt_project\kt-manager\kt-manager-    service\target\classes\spring\applicationContext-dao.xml]: Invocation of init method failed; nested exception is                   org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 12; 元素类型为 "plugins" 的内容必须匹配 "(plugin)+"。
+2. 出现错误:  
+Error creating bean with name 'sqlSessionFactory' defined in file [C:\Users\Administrator\git\kt_project\kt-manager\kt-manager-    service\target\classes\spring\applicationContext-dao.xml]: Invocation of init method failed; nested exception is                   org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 12; 元素类型为 "plugins" 的内容必须匹配 "(plugin)+"。  
 本来以为是applicationContext-dao.xml这个文件出错了,后来才发现是
 
