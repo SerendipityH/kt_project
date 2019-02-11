@@ -23,10 +23,10 @@ public class PageHelperTest {
 		// 执行查询
 		TbItemExample example = new TbItemExample();
 		List<TbItem> list = itemMapper.selectByExample(example);
+		// 取分页信息，PageInfo.
 		PageInfo<TbItem> pageInfo = new PageInfo<>(list);
 		System.out.println(pageInfo.getTotal());
 		System.out.println(pageInfo.getPages());
 		System.out.println(list.size());
-		// 取分页信息，PageInfo.
 	}
 }
