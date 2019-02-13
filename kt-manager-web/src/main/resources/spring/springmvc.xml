@@ -25,4 +25,5 @@
 	<dubbo:application name="kt-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="172.16.2.52:2181"/>	
 	<dubbo:reference interface="com.serendipity.service.ItemService" id="itemService" />
+	<dubbo:reference interface="com.serendipity.service.ItemCatService" id="itemCatService" />
 </beans>
