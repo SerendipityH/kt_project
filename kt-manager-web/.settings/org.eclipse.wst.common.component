@@ -5,7 +5,6 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <dependent-module archiveName="kt-manager-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kt-manager-interface/kt-manager-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
@@ -16,6 +15,9 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="fastdfs_client-1.25.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/fastdfs_client/fastdfs_client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="kt-content-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kt-content-interface/kt-content-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
 		<property name="context-root" value="kt-manager-web"/>

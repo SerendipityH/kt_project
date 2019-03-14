@@ -10,4 +10,5 @@ public interface ItemService {
 	EasyUIDataGridResult getItemList(int page, int rows);
 	
 	E3Result addItem(TbItem item,String desc);
+	
 }
