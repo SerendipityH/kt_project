@@ -5,9 +5,7 @@
     <artifactId>kt-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.serendipity</groupId>
   <artifactId>kt-search</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
   	<module>kt-search-interface</module>
