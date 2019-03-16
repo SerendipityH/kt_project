@@ -9,9 +9,10 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
      http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
-   
-    <!-- 加载配置文件 -->
-	<context:property-placeholder location="classpath:conf/resource.properties"/>
+
+	<!-- 加载配置文件 -->
+	<context:property-placeholder
+		location="classpath:conf/resource.properties" />
 	<context:component-scan
 		base-package="com.serendipity.controller" />
 	<mvc:annotation-driven />
@@ -31,13 +32,23 @@
 		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
 		<property name="maxUploadSize" value="5242880"></property>
 	</bean>
-	
+
 	<!-- 引用dubbo服务 -->
-	<dubbo:application name="kt-manager-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
-	<dubbo:reference interface="com.serendipity.service.ItemService" id="itemService" />
-	<dubbo:reference interface="com.serendipity.service.ItemCatService" id="itemCatService" />
-	<dubbo:reference interface="com.serendipity.content.service.ContentCategoryService" id="contentCategoryService" />
-	<dubbo:reference interface="com.serendipity.content.service.ContentService" id="contentService" />
+	<dubbo:application name="kt-manager-web" />
+	<dubbo:registry protocol="zookeeper"
+		address="192.168.25.128:2181" />
+	<dubbo:reference
+		interface="com.serendipity.service.ItemService" id="itemService" />
+	<dubbo:reference
+		interface="com.serendipity.service.ItemCatService" id="itemCatService" />
+	<dubbo:reference
+		interface="com.serendipity.content.service.ContentCategoryService"
+		id="contentCategoryService" />
+	<dubbo:reference
+		interface="com.serendipity.content.service.ContentService"
+		id="contentService" />
+	<dubbo:reference
+		interface="com.serendipity.search.service.SearchItemService"
+		id="searchItemService"  />
 
 </beans>
