@@ -20,12 +20,12 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-	
+	<!-- 全局异常处理器 -->
+	<bean class="com.serendipity.search.exception.GlobalExceptionResolver"/>
 	
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="kt-search-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
-	<!-- <dubbo:reference interface="com.serendipity.content.service.ContentService" id="contentService" />
-	 -->
+	<dubbo:reference interface="com.serendipity.search.service.SearchService" id="searchService" />
+	
 </beans>
