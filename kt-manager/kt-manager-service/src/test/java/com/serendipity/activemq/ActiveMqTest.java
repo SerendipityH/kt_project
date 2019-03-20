@@ -63,7 +63,7 @@ public class ActiveMqTest {
 		// 使用Connection对象创建一个Session对象
 		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 		// 创建一个Destnation对象，queue对象
-		Queue queue = session.createQueue("test-queue");
+		Queue queue = session.createQueue("spring-queue");
 		// 使用session对象创建一个消费者对象
 		MessageConsumer consumer = session.createConsumer(queue);
 		// 接受消息
