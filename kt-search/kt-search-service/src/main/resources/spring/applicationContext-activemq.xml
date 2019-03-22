@@ -17,7 +17,6 @@
 		<!-- 目标ConnectionFactory对应真实的可以产生JMS Connection的ConnectionFactory -->
 		<property name="targetConnectionFactory" ref="targetConnectionFactory" />
 	</bean>
-	
 	<!--这个是队列目的地，点对点的 -->
 	<bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
 		<constructor-arg>
@@ -26,16 +25,20 @@
 	</bean>
 	<!--这个是主题目的地，一对多的 -->
 	<bean id="topicDestination" class="org.apache.activemq.command.ActiveMQTopic">
-		<constructor-arg value="topic" />
+		<constructor-arg value="itemAddTopic" />
 	</bean>
-	<!-- 接收消息 -->
-	<!-- 配置监听器 -->
-	<bean id="myMessageListener" class="com.serendipity.search.message.MyMessageListener"></bean>
+	<bean id="myMessageListener" class="com.serendipity.search.message.MyMessageListener"/>
 	<!-- 消息监听容器 -->
 	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="connectionFactory" />
 		<property name="destination" ref="queueDestination" />
 		<property name="messageListener" ref="myMessageListener" />
 	</bean>
-	
+	<!-- 监听商品添加消息，同步索引库 -->
+	<bean id="itemAddMessageListener" class="com.serendipity.search.message.ItemAddMessageListener"/>
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="topicDestination" />
+		<property name="messageListener" ref="itemAddMessageListener" />
+	</bean>
 </beans>
