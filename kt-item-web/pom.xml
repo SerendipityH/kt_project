@@ -7,16 +7,17 @@
 		<artifactId>kt-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>kt-item-web</artifactId>
-	
+
 	<packaging>war</packaging>
 	<dependencies>
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.serendipity</groupId>
-			<artifactId>kt-content-interface</artifactId>
+			<artifactId>kt-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency> -->
+		</dependency>
+
 		<!-- JSP相关 -->
 		<dependency>
 			<groupId>jstl</groupId>
@@ -87,6 +88,10 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
 		</dependency>
 	</dependencies>
 	<!-- 配置Tomcat插件 -->
