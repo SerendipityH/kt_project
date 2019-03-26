@@ -28,11 +28,11 @@ public class JedisTest {
 		jedis.close();
 		jedisPool.close();
 	}
-	
+
 	@Test
-	public void testJedisCluster() throws Exception{
-		//创建一个JedisCluster对象，有一个参数nodes是一个set类型
-		Set<HostAndPort> nodes =new HashSet<>();
+	public void testJedisCluster() throws Exception {
+		// 创建一个JedisCluster对象，有一个参数nodes是一个set类型
+		Set<HostAndPort> nodes = new HashSet<>();
 		nodes.add(new HostAndPort("192.168.25.128", 7001));
 		nodes.add(new HostAndPort("192.168.25.128", 7002));
 		nodes.add(new HostAndPort("192.168.25.128", 7003));
@@ -40,11 +40,11 @@ public class JedisTest {
 		nodes.add(new HostAndPort("192.168.25.128", 7005));
 		nodes.add(new HostAndPort("192.168.25.128", 7006));
 		JedisCluster jedisCluster = new JedisCluster(nodes);
-		jedisCluster.set("test1","123");
+		jedisCluster.set("test1", "123");
 		System.out.println(jedisCluster.get("test1"));
-		//new JedisCluster(nodes);
-		//直接使用JedisCluster对象操作redis
-		//关闭jedisCluster对象
+		// new JedisCluster(nodes);
+		// 直接使用JedisCluster对象操作redis
+		// 关闭jedisCluster对象
 		jedisCluster.close();
 	}
 }

@@ -13,67 +13,64 @@ import org.csource.common.*;
 import org.csource.fastdfs.*;
 
 /**
-* load test class
-* @author Happy Fish / YuQing
-* @version Version 1.20
-*/
-public class Monitor
-{
-	private Monitor()
-	{
+ * load test class
+ * 
+ * @author Happy Fish / YuQing
+ * @version Version 1.20
+ */
+public class Monitor {
+	private Monitor() {
 	}
-	
+
 	/**
-	* entry point
-	* @param args comand arguments
-	*     <ul><li>args[0]: config filename</li></ul>
-	*/
-  public static void main(String args[])
-  {
-  	if (args.length < 1)
-  	{
-  		System.out.println("Error: Must have 1 parameter: config filename");
-  		return;
-  	}
-  	
-  	System.out.println("java.version=" + System.getProperty("java.version"));
-  	
-  	try
-  	{
-  		ClientGlobal.init(args[0]);
-  		System.out.println("network_timeout=" + ClientGlobal.g_network_timeout + "ms");
-  		System.out.println("charset=" + ClientGlobal.g_charset);
-  		
-  		TrackerClient tracker = new TrackerClient();
-  		
-  		/*
-  		System.out.println("delete storage return: " + tracker.deleteStorage("group1", "192.168.0.192"));
-  		System.out.println("delete storage errno: " + tracker.getErrorCode());
-  		*/
-  		
-  		TrackerServer trackerServer = tracker.getConnection();
-  		if (trackerServer == null)
-  		{
-  			return;
-  		}
-  		
-  		int count;
-  		StructGroupStat[] groupStats = tracker.listGroups(trackerServer);
-  		if (groupStats == null)
-  		{
-  			System.out.println("");
-  			System.out.println("ERROR! list groups error, error no: " + tracker.getErrorCode());
-  			System.out.println("");
-  			return;
-  		}
-  		
-  		System.out.println("group count: " + groupStats.length);
-  		
-  		count = 0;
-  		for (StructGroupStat groupStat :  groupStats)
-  		{
-  			count++;
-  			System.out.println("Group " + count + ":");
+	 * entry point
+	 * 
+	 * @param args comand arguments
+	 *             <ul>
+	 *             <li>args[0]: config filename</li>
+	 *             </ul>
+	 */
+	public static void main(String args[]) {
+		if (args.length < 1) {
+			System.out.println("Error: Must have 1 parameter: config filename");
+			return;
+		}
+
+		System.out.println("java.version=" + System.getProperty("java.version"));
+
+		try {
+			ClientGlobal.init(args[0]);
+			System.out.println("network_timeout=" + ClientGlobal.g_network_timeout + "ms");
+			System.out.println("charset=" + ClientGlobal.g_charset);
+
+			TrackerClient tracker = new TrackerClient();
+
+			/*
+			 * System.out.println("delete storage return: " +
+			 * tracker.deleteStorage("group1", "192.168.0.192"));
+			 * System.out.println("delete storage errno: " + tracker.getErrorCode());
+			 */
+
+			TrackerServer trackerServer = tracker.getConnection();
+			if (trackerServer == null) {
+				return;
+			}
+
+			int count;
+			StructGroupStat[] groupStats = tracker.listGroups(trackerServer);
+			if (groupStats == null) {
+				System.out.println("");
+				System.out.println("ERROR! list groups error, error no: " + tracker.getErrorCode());
+				System.out.println("");
+				return;
+			}
+
+			System.out.println("group count: " + groupStats.length);
+
+			count = 0;
+			for (StructGroupStat groupStat : groupStats) {
+				count++;
+				System.out.println("Group " + count + ":");
 				System.out.println("group name = " + groupStat.getGroupName());
 				System.out.println("disk total space = " + groupStat.getTotalMB() + "MB");
 				System.out.println("disk free space = " + groupStat.getFreeMB() + " MB");
@@ -86,28 +83,28 @@ public class Monitor
 				System.out.println("subdir count per path = " + groupStat.getSubdirCountPerPath());
 				System.out.println("current write server index = " + groupStat.getCurrentWriteServer());
 				System.out.println("current trunk file id = " + groupStat.getCurrentTrunkFileId());
-				
+
 				StructStorageStat[] storageStats = tracker.listStorages(trackerServer, groupStat.getGroupName());
-				if (storageStats == null)
-				{
+				if (storageStats == null) {
 					System.out.println("");
-	  			System.out.println("ERROR! list storage error, error no: " + tracker.getErrorCode());
-	  			System.out.println("");
-	  			break;
+					System.out.println("ERROR! list storage error, error no: " + tracker.getErrorCode());
+					System.out.println("");
+					break;
 				}
-				
+
 				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 				int stroageCount = 0;
-				for (StructStorageStat storageStat : storageStats)
-				{
+				for (StructStorageStat storageStat : storageStats) {
 					stroageCount++;
 					System.out.println("\tStorage " + stroageCount + ":");
 					System.out.println("\t\tstorage id = " + storageStat.getId());
-					System.out.println("\t\tip_addr = " + storageStat.getIpAddr() + "  " + ProtoCommon.getStorageStatusCaption(storageStat.getStatus()));
+					System.out.println("\t\tip_addr = " + storageStat.getIpAddr() + "  "
+							+ ProtoCommon.getStorageStatusCaption(storageStat.getStatus()));
 					System.out.println("\t\thttp domain = " + storageStat.getDomainName());
 					System.out.println("\t\tversion = " + storageStat.getVersion());
 					System.out.println("\t\tjoin time = " + df.format(storageStat.getJoinTime()));
-					System.out.println("\t\tup time = " + (storageStat.getUpTime().getTime() == 0 ? "" : df.format(storageStat.getUpTime())));
+					System.out.println("\t\tup time = "
+							+ (storageStat.getUpTime().getTime() == 0 ? "" : df.format(storageStat.getUpTime())));
 					System.out.println("\t\ttotal storage = " + storageStat.getTotalMB() + "MB");
 					System.out.println("\t\tfree storage = " + storageStat.getFreeMB() + "MB");
 					System.out.println("\t\tupload priority = " + storageStat.getUploadPriority());
@@ -162,40 +159,36 @@ public class Monitor
 					System.out.println("\t\tlast_heart_beat_time = " + df.format(storageStat.getLastHeartBeatTime()));
 					System.out.println("\t\tlast_source_update = " + df.format(storageStat.getLastSourceUpdate()));
 					System.out.println("\t\tlast_sync_update = " + df.format(storageStat.getLastSyncUpdate()));
-					System.out.println("\t\tlast_synced_timestamp = " + df.format(storageStat.getLastSyncedTimestamp()) + getSyncedDelayString(storageStats, storageStat));
+					System.out.println("\t\tlast_synced_timestamp = " + df.format(storageStat.getLastSyncedTimestamp())
+							+ getSyncedDelayString(storageStats, storageStat));
 				}
-  		}
-  		
-  		trackerServer.close();
+			}
+
+			trackerServer.close();
+		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
-  	catch(Exception ex)
-  	{
-  		ex.printStackTrace();
-  	}
-  }
-  
-  protected static String getSyncedDelayString(StructStorageStat[] storageStats, StructStorageStat currentStorageStat)
-  {
+	}
+
+	protected static String getSyncedDelayString(StructStorageStat[] storageStats,
+			StructStorageStat currentStorageStat) {
 		long maxLastSourceUpdate = 0;
-		for (StructStorageStat storageStat : storageStats)
-		{
-      if (storageStat != currentStorageStat && storageStat.getLastSourceUpdate().getTime() > maxLastSourceUpdate)
-      {
-      	maxLastSourceUpdate = storageStat.getLastSourceUpdate().getTime();
-      }
-		}
-		
-		if (maxLastSourceUpdate == 0)
-		{
-		 	return "";
+		for (StructStorageStat storageStat : storageStats) {
+			if (storageStat != currentStorageStat
+					&& storageStat.getLastSourceUpdate().getTime() > maxLastSourceUpdate) {
+				maxLastSourceUpdate = storageStat.getLastSourceUpdate().getTime();
+			}
 		}
 
-		if (currentStorageStat.getLastSyncedTimestamp().getTime() == 0)
-		{
+		if (maxLastSourceUpdate == 0) {
+			return "";
+		}
+
+		if (currentStorageStat.getLastSyncedTimestamp().getTime() == 0) {
 			return " (never synced)";
 		}
-		
-		int delaySeconds = (int)((maxLastSourceUpdate - currentStorageStat.getLastSyncedTimestamp().getTime()) / 1000);
+
+		int delaySeconds = (int) ((maxLastSourceUpdate - currentStorageStat.getLastSyncedTimestamp().getTime()) / 1000);
 		int day = delaySeconds / (24 * 3600);
 		int remainSeconds = delaySeconds % (24 * 3600);
 		int hour = remainSeconds / 3600;
@@ -203,23 +196,16 @@ public class Monitor
 		int minute = remainSeconds / 60;
 		int second = remainSeconds % 60;
 		String delayTimeStr;
-		if (day != 0)
-		{
+		if (day != 0) {
 			delayTimeStr = String.format("%1$d days %2$02dh:%3$02dm:%4$02ds", day, hour, minute, second);
-		}
-		else if (hour != 0)
-		{
+		} else if (hour != 0) {
 			delayTimeStr = String.format("%1$02dh:%2$02dm:%3$02ds", hour, minute, second);
-		}
-		else if (minute != 0)
-		{
+		} else if (minute != 0) {
 			delayTimeStr = String.format("%1$02dm:%2$02ds", minute, second);
-		}
-		else
-		{
+		} else {
 			delayTimeStr = String.format("%1$ds", second);
 		}
-		
+
 		return " (" + delayTimeStr + " delay)";
 	}
 }

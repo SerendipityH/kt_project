@@ -42,7 +42,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 			node.setId(tbItemCat.getId());
 			node.setText(tbItemCat.getName());
 			node.setState(tbItemCat.getIsParent() ? "closed" : "open");
-			//添加到结果列表
+			// 添加到结果列表
 			resultList.add(node);
 		}
 		// 返回结果

@@ -9,9 +9,9 @@ public interface ItemService {
 	TbItem geTbItemById(long itemId);
 
 	EasyUIDataGridResult getItemList(int page, int rows);
-	
-	E3Result addItem(TbItem item,String desc);
-	
+
+	E3Result addItem(TbItem item, String desc);
+
 	TbItemDesc getItemDescById(long itemId);
-	
+
 }

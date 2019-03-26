@@ -36,16 +36,16 @@ public class PictureController {
 			// 补充为完整的url
 			url = IMAGE_SERVER_URL + url;
 			// 封装到Map中返回
-			Map result= new HashMap<>();
-			result.put("error",0);
+			Map result = new HashMap<>();
+			result.put("error", 0);
 			result.put("url", url);
-			
+
 			return JsonUtils.objectToJson(result);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			Map result= new HashMap<>();
-			result.put("error",0);
+			Map result = new HashMap<>();
+			result.put("error", 0);
 			result.put("message", "图片上传失败");
 			return JsonUtils.objectToJson(result);
 		}

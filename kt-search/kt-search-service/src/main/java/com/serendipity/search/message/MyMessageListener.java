@@ -10,8 +10,8 @@ public class MyMessageListener implements MessageListener {
 	@Override
 	public void onMessage(Message message) {
 		// TODO Auto-generated method stub
-		//取消息内容
-		TextMessage textMessage=(TextMessage) message;
+		// 取消息内容
+		TextMessage textMessage = (TextMessage) message;
 		try {
 			String text = textMessage.getText();
 			System.out.println(text);

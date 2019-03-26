@@ -10,15 +10,16 @@ import com.serendipity.search.service.SearchItemService;
 
 /**
  * 导入商品数据到索引库
+ * 
  * @author gqh
  *
  */
 @Controller
 public class SearchItemController {
-	
+
 	@Autowired
 	private SearchItemService searchItemService;
-	
+
 	@RequestMapping("/index/item/import")
 	@ResponseBody
 	public E3Result importItemList() {

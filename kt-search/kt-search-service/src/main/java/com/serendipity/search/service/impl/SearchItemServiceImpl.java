@@ -1,4 +1,5 @@
 package com.serendipity.search.service.impl;
+
 import java.util.List;
 
 import org.apache.solr.client.solrj.SolrServer;

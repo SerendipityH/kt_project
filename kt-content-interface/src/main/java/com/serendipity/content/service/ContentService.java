@@ -7,6 +7,6 @@ import com.serendipity.pojo.TbContent;
 
 public interface ContentService {
 	E3Result addContent(TbContent content);
-	
+
 	List<TbContent> getContentListByCid(long cid);
 }

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class SearchResult implements Serializable {
 	private long recordCount;
-	
+
 	private int totalPage;
-	
+
 	private List<SearchItem> itemList;
 
 	public long getRecordCount() {
@@ -33,5 +33,5 @@ public class SearchResult implements Serializable {
 	public void setItemList(List<SearchItem> itemList) {
 		this.itemList = itemList;
 	}
-	
+
 }

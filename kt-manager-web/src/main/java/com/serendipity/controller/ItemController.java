@@ -26,19 +26,20 @@ public class ItemController {
 
 	@RequestMapping("/item/list")
 	@ResponseBody
-	public EasyUIDataGridResult getItemList(Integer page,Integer rows) {
+	public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
 		// 调用服务查询商品列表
 		EasyUIDataGridResult result = itemService.getItemList(page, rows);
 		return result;
 	}
+
 	/**
 	 * 商品添加
 	 */
-	@RequestMapping(value="/item/save",method=RequestMethod.POST)
+	@RequestMapping(value = "/item/save", method = RequestMethod.POST)
 	@ResponseBody
-	public E3Result addItem(TbItem item,String desc) {
+	public E3Result addItem(TbItem item, String desc) {
 		E3Result result = itemService.addItem(item, desc);
 		return result;
 	}
-	
+
 }

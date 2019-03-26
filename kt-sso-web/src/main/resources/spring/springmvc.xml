@@ -27,6 +27,6 @@
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="kt-sso-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
-<!-- 	<dubbo:reference interface="com.serendipity.content.service.ContentService" id="contentService" /> -->
+	<dubbo:reference interface="com.serendipity.sso.service.RegisterService" id="registerService" />
 	
 </beans>
