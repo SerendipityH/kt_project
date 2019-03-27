@@ -13,23 +13,23 @@ import org.springframework.jms.core.MessageCreator;
 
 public class ActiveMqSpring {
 
-	@Test
-	public void sendMessage() throws Exception {
-		// 初始化spring容器
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
-				"classpath:spring/applicationContext-activemq.xml");
-		// 从容器中获得JmsTemplate对象
-		JmsTemplate jmsTemplate = applicationContext.getBean(JmsTemplate.class);
-		// 从容器中获得Destination对象
-		Destination destniation = (Destination) applicationContext.getBean("queueDestination");
-		// 发送消息
-		jmsTemplate.send(destniation, new MessageCreator() {
+  @Test
+  public void sendMessage() throws Exception {
+    // 初始化spring容器
+    ApplicationContext applicationContext =
+        new ClassPathXmlApplicationContext("classpath:spring/applicationContext-activemq.xml");
+    // 从容器中获得JmsTemplate对象
+    JmsTemplate jmsTemplate = applicationContext.getBean(JmsTemplate.class);
+    // 从容器中获得Destination对象
+    Destination destniation = (Destination) applicationContext.getBean("queueDestination");
+    // 发送消息
+    jmsTemplate.send(destniation, new MessageCreator() {
 
-			@Override
-			public Message createMessage(Session session) throws JMSException {
-				// TODO Auto-generated method stub
-				return session.createTextMessage("send activemq message");
-			}
-		});
-	}
+      @Override
+      public Message createMessage(Session session) throws JMSException {
+        // TODO Auto-generated method stub
+        return session.createTextMessage("send activemq message");
+      }
+    });
+  }
 }

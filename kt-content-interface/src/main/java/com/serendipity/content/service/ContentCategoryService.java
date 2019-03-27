@@ -7,7 +7,7 @@ import com.serendipity.common.utils.E3Result;
 
 public interface ContentCategoryService {
 
-	List<EasyUITreeNode> getContentCatList(long parentId);
+  List<EasyUITreeNode> getContentCatList(long parentId);
 
-	E3Result addContentCategory(long parentId, String name);
+  E3Result addContentCategory(long parentId, String name);
 }

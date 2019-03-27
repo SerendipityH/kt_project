@@ -6,25 +6,26 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TbUserMapper {
-	int countByExample(TbUserExample example);
+  int countByExample(TbUserExample example);
 
-	int deleteByExample(TbUserExample example);
+  int deleteByExample(TbUserExample example);
 
-	int deleteByPrimaryKey(Long id);
+  int deleteByPrimaryKey(Long id);
 
-	int insert(TbUser record);
+  int insert(TbUser record);
 
-	int insertSelective(TbUser record);
+  int insertSelective(TbUser record);
 
-	List<TbUser> selectByExample(TbUserExample example);
+  List<TbUser> selectByExample(TbUserExample example);
 
-	TbUser selectByPrimaryKey(Long id);
+  TbUser selectByPrimaryKey(Long id);
 
-	int updateByExampleSelective(@Param("record") TbUser record, @Param("example") TbUserExample example);
+  int updateByExampleSelective(@Param("record") TbUser record,
+      @Param("example") TbUserExample example);
 
-	int updateByExample(@Param("record") TbUser record, @Param("example") TbUserExample example);
+  int updateByExample(@Param("record") TbUser record, @Param("example") TbUserExample example);
 
-	int updateByPrimaryKeySelective(TbUser record);
+  int updateByPrimaryKeySelective(TbUser record);
 
-	int updateByPrimaryKey(TbUser record);
+  int updateByPrimaryKey(TbUser record);
 }
