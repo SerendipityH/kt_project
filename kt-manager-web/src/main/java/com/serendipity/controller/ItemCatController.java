@@ -19,15 +19,15 @@ import com.serendipity.service.ItemCatService;
 
 @Controller
 public class ItemCatController {
-  @Autowired
-  private ItemCatService itemCatService;
+    @Autowired
+    private ItemCatService itemCatService;
 
-  @RequestMapping("/item/cat/list")
-  @ResponseBody
-  public List<EasyUITreeNode> getItemCatList(
-      @RequestParam(name = "id", defaultValue = "0") long parentId) {
-    // 调用服务查询节点列表
-    List<EasyUITreeNode> list = itemCatService.getItemCatlist(parentId);
-    return list;
-  }
+    @RequestMapping("/item/cat/list")
+    @ResponseBody
+    public List<EasyUITreeNode> getItemCatList(
+            @RequestParam(name = "id", defaultValue = "0") long parentId) {
+        // 调用服务查询节点列表
+        List<EasyUITreeNode> list = itemCatService.getItemCatlist(parentId);
+        return list;
+    }
 }

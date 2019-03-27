@@ -13,15 +13,15 @@ import com.serendipity.pojo.TbContent;
 @Controller
 public class ContentController {
 
-  @Autowired
-  private ContentService contentService;
+    @Autowired
+    private ContentService contentService;
 
-  @RequestMapping(value = "/content/save", method = RequestMethod.POST)
-  @ResponseBody
-  public E3Result addContent(TbContent content) {
-    E3Result E3Result = contentService.addContent(content);
+    @RequestMapping(value = "/content/save", method = RequestMethod.POST)
+    @ResponseBody
+    public E3Result addContent(TbContent content) {
+        E3Result E3Result = contentService.addContent(content);
 
-    return E3Result;
-  }
+        return E3Result;
+    }
 
 }

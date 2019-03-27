@@ -19,11 +19,11 @@ import org.csource.common.*;
  * @version Version 1.0
  */
 public interface UploadCallback {
-  /**
-   * send file content callback function, be called only once when the file uploaded
-   * 
-   * @param out output stream for writing file content
-   * @return 0 success, return none zero(errno) if fail
-   */
-  public int send(OutputStream out) throws IOException;
+    /**
+     * send file content callback function, be called only once when the file uploaded
+     * 
+     * @param out output stream for writing file content
+     * @return 0 success, return none zero(errno) if fail
+     */
+    public int send(OutputStream out) throws IOException;
 }

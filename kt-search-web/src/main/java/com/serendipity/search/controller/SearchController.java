@@ -18,26 +18,26 @@ import com.serendipity.search.service.SearchService;
 
 @Controller
 public class SearchController {
-  @Autowired
-  private SearchService searchService;
+    @Autowired
+    private SearchService searchService;
 
-  @Value("${SEARCH_RESULT_ROWS}")
-  private Integer SEARCH_RESULT_ROWS;
+    @Value("${SEARCH_RESULT_ROWS}")
+    private Integer SEARCH_RESULT_ROWS;
 
-  @RequestMapping("/search")
-  public String searchItemList(String keyword, @RequestParam(defaultValue = "1") Integer page,
-      Model model) throws Exception {
-    keyword = new String(keyword.getBytes("iso-8859-1"), "utf-8");
-    // 查询商品列表
-    SearchResult searchResult = searchService.search(keyword, page, SEARCH_RESULT_ROWS);
-    // 把结果传递给页面
-    model.addAttribute("query", keyword);
-    model.addAttribute("totalPages", searchResult.getTotalPage());
-    model.addAttribute("page", page);
-    model.addAttribute("recourdCount", searchResult.getRecordCount());
-    model.addAttribute("itemList", searchResult.getItemList());
+    @RequestMapping("/search")
+    public String searchItemList(String keyword, @RequestParam(defaultValue = "1") Integer page,
+            Model model) throws Exception {
+        keyword = new String(keyword.getBytes("iso-8859-1"), "utf-8");
+        // 查询商品列表
+        SearchResult searchResult = searchService.search(keyword, page, SEARCH_RESULT_ROWS);
+        // 把结果传递给页面
+        model.addAttribute("query", keyword);
+        model.addAttribute("totalPages", searchResult.getTotalPage());
+        model.addAttribute("page", page);
+        model.addAttribute("recourdCount", searchResult.getRecordCount());
+        model.addAttribute("itemList", searchResult.getItemList());
 
-    // 返回逻辑视图
-    return "search";
-  }
+        // 返回逻辑视图
+        return "search";
+    }
 }

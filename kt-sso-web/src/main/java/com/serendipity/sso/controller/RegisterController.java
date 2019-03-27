@@ -21,26 +21,26 @@ import com.serendipity.sso.service.RegisterService;
 @Controller
 public class RegisterController {
 
-  @Autowired
-  private RegisterService registerService;
+    @Autowired
+    private RegisterService registerService;
 
-  @RequestMapping("/page/register")
-  public String showRegister() {
-    return "register";
-  }
+    @RequestMapping("/page/register")
+    public String showRegister() {
+        return "register";
+    }
 
-  @RequestMapping("/user/check/{param}/{type}")
-  @ResponseBody
-  public E3Result checkData(@PathVariable String param, @PathVariable Integer type) {
-    E3Result e3Result = registerService.checkData(param, type);
-    return e3Result;
-  }
+    @RequestMapping("/user/check/{param}/{type}")
+    @ResponseBody
+    public E3Result checkData(@PathVariable String param, @PathVariable Integer type) {
+        E3Result e3Result = registerService.checkData(param, type);
+        return e3Result;
+    }
 
 
-  @RequestMapping(value = "/user/register", method = RequestMethod.POST)
-  @ResponseBody
-  public E3Result register(TbUser user) {
-    E3Result e3Result = registerService.register(user);
-    return e3Result;
-  }
+    @RequestMapping(value = "/user/register", method = RequestMethod.POST)
+    @ResponseBody
+    public E3Result register(TbUser user) {
+        E3Result e3Result = registerService.register(user);
+        return e3Result;
+    }
 }

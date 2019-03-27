@@ -17,13 +17,13 @@ import com.serendipity.search.service.SearchItemService;
 @Controller
 public class SearchItemController {
 
-  @Autowired
-  private SearchItemService searchItemService;
+    @Autowired
+    private SearchItemService searchItemService;
 
-  @RequestMapping("/index/item/import")
-  @ResponseBody
-  public E3Result importItemList() {
-    E3Result e3Result = searchItemService.importAllItems();
-    return e3Result;
-  }
+    @RequestMapping("/index/item/import")
+    @ResponseBody
+    public E3Result importItemList() {
+        E3Result e3Result = searchItemService.importAllItems();
+        return e3Result;
+    }
 }
