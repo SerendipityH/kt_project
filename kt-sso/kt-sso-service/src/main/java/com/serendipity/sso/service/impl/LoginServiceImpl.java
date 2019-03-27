@@ -42,6 +42,7 @@ public class LoginServiceImpl implements LoginService {
         if (list == null || list.size() == 0) {
             // 返回登录失败
             // 2.如果不正确，返回登录失败
+            System.out.println(list.size());
             return E3Result.build(400, "用户名或密码错误");
         }
         // 取用户信息
@@ -49,6 +50,7 @@ public class LoginServiceImpl implements LoginService {
         // 判断密码是否正确
         if (!DigestUtils.md5DigestAsHex(password.getBytes()).equals(user.getPassword())) {
             // 返回登录失败
+            System.out.println(list.size());
             return E3Result.build(400, "用户名或密码错误");
         }
 
