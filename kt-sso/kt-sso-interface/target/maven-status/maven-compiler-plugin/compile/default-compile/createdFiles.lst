@@ -1,2 +1,3 @@
 com\serendipity\sso\service\RegisterService.class
 com\serendipity\sso\service\LoginService.class
+com\serendipity\sso\service\TokenService.class
