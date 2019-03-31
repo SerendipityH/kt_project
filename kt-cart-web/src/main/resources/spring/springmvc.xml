@@ -25,6 +25,6 @@
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="kt-cart-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
-	<!-- <dubbo:reference interface="com.serendipity.sso.service.RegisterService" id="registerService" />
-	 -->
+	<dubbo:reference interface="com.serendipity.service.ItemService" id="itemService" />
+	
 </beans>
