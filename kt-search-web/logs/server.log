@@ -10429,3 +10429,463 @@ Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-we
 
 [INFO ] 2019-03-31 20:39:27,393 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
 FrameworkServlet 'kt-search-web': initialization completed in 10539 ms
+
+
+[INFO ] 2019-04-01 20:10:34,723 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-01 20:10:34,759 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 20:10:34 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 20:10:34,784 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-01 20:10:34,992 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-01 20:10:35,076 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-01 20:10:35,080 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-01 20:10:35,305 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=11764&side=provider&timeout=60000&timestamp=1554120547361, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120575606 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120575606 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=240&side=provider&timeout=60000&timestamp=1554120552129, com.serendipity.sso.service.TokenService=empty://192.168.25.1/com.serendipity.sso.service.TokenService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=13476&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120573734 empty://192.168.25.1/com.serendipity.sso.service.TokenService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=13476&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120573734 dubbo://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=6264&side=provider&timeout=600000&timestamp=1554120532452, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=13476&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120571288 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=13476&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120571288 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=6264&side=provider&timeout=600000&timestamp=1554120532268, com.serendipity.search.service.SearchItemService=empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576644 empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576644 dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=11764&side=provider&timeout=60000&timestamp=1554120544619, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=13476&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120573520 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=13476&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120573520 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=6264&side=provider&timeout=600000&timestamp=1554120529678, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=5488&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576922 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=5488&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576922 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=13192&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554120558250, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576386 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576386 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=13192&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554120559715, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576251 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=12828&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120576251 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=240&side=provider&timeout=60000&timestamp=1554120555924}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-01 20:10:35,316 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-01 20:10:35,335 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-01 20:10:35,335 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-01 20:10:35,336 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-01 20:10:35,336 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-01 20:10:35,336 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-01 20:10:35,336 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-01 20:10:35,337 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-01 20:10:35,337 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-01 20:10:35,337 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-01 20:10:35,338 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-01 20:10:35,338 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-01 20:10:35,338 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-01 20:10:35,339 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-01 20:10:35,339 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-01 20:10:35,339 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-01 20:10:35,340 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@33d52ed
+
+
+[INFO ] 2019-04-01 20:10:35,371 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-01 20:10:35,373 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-04-01 20:10:35,379 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x16985d9eecb00df, negotiated timeout = 30000
+
+
+[INFO ] 2019-04-01 20:10:35,381 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-04-01 20:10:35,405 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=8568&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120635242, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:10:35,425 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=8568&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120635242, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:10:35,490 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=8568&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120635242, urls: [dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=11764&side=provider&timeout=60000&timestamp=1554120547361, empty://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=8568&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120635242, empty://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=8568&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554120635242], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:10:35,656 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x5e1870f1, /192.168.25.1:60961 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:10:35,657 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient DESKTOP-K7E88KT/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:10:35,706 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.serendipity.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=kt-search-web&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=8568&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1554120635242, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:10:35,868 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.serendipity.search.controller.SearchController.searchItemList(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-04-01 20:10:36,092 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 20:10:34 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 20:10:36,125 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 20:10:34 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 20:10:36,210 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'kt-search-web': initialization completed in 1479 ms
+
+
+[INFO ] 2019-04-01 20:57:37,460 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-01 20:57:37,486 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 20:57:37 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 20:57:37,527 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-01 20:57:38,922 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-01 20:57:39,111 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-01 20:57:39,118 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-01 20:57:39,639 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-01 20:57:39,672 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-01 20:57:39,693 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-01 20:57:39,694 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-01 20:57:39,694 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-01 20:57:39,695 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-01 20:57:39,695 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-01 20:57:39,696 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-01 20:57:39,696 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-01 20:57:39,697 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-01 20:57:39,698 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-01 20:57:39,699 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-01 20:57:39,700 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-01 20:57:39,700 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-01 20:57:39,700 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-01 20:57:39,701 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-01 20:57:39,701 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-01 20:57:39,703 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1d7e4b96
+
+
+[INFO ] 2019-04-01 20:57:39,830 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-01 20:57:39,849 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-04-01 20:57:39,864 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x16985d9eecb00ed, negotiated timeout = 30000
+
+
+[INFO ] 2019-04-01 20:57:39,869 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-04-01 20:57:39,916 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13544&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123459540, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:57:39,993 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13544&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123459540, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:57:40,105 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13544&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123459540, urls: [dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13652&side=provider&timeout=60000&timestamp=1554123448105, empty://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13544&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123459540, empty://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13544&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123459540], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:57:40,339 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x8d3541a9, /192.168.25.1:64610 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:57:40,340 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient DESKTOP-K7E88KT/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:57:40,520 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.serendipity.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=kt-search-web&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=13544&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1554123459540, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 20:57:40,825 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.serendipity.search.controller.SearchController.searchItemList(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-04-01 20:57:41,213 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 20:57:37 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 20:57:41,283 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 20:57:37 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 20:57:41,503 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'kt-search-web': initialization completed in 4038 ms
+
+
+[WARN ] 2019-04-01 21:17:41,941 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1136)
+No mapping found for HTTP request with URI [/html/web/_public/_ajaxStaticMenu.html] in DispatcherServlet with name 'kt-search-web'
+
+
+[INFO ] 2019-04-01 21:22:24,941 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-01 21:22:25,028 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 21:22:25 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 21:22:25,105 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-01 21:22:25,672 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-01 21:22:25,858 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-01 21:22:25,864 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-01 21:22:26,880 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=10156&side=provider&timeout=60000&timestamp=1554124935165, com.serendipity.sso.service.TokenService=empty://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=2328&side=provider&timeout=600000&timestamp=1554124874751, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=2328&side=provider&timeout=600000&timestamp=1554124874708, com.serendipity.search.service.SearchItemService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=10060&side=provider&timeout=60000&timestamp=1554124937113, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=2328&side=provider&timeout=600000&timestamp=1554124874230, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-item-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=9588&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124935073 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-item-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=9588&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124935073 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124925846, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=9756&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123460239 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=9756&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554123460239 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1572&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554123415224, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-portal-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=5112&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124940499 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-portal-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=5112&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124940499 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=10156&side=provider&timeout=60000&timestamp=1554124938867}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-01 21:22:26,934 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-01 21:22:26,967 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-01 21:22:26,968 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-01 21:22:26,969 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-01 21:22:26,969 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-01 21:22:26,969 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-01 21:22:26,969 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-01 21:22:26,970 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-01 21:22:26,971 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-01 21:22:26,971 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-01 21:22:26,973 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-01 21:22:26,973 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-01 21:22:26,974 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-01 21:22:26,974 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-01 21:22:26,975 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-01 21:22:26,975 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-01 21:22:26,977 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@f1ddad
+
+
+[INFO ] 2019-04-01 21:22:27,024 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-01 21:22:27,029 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-04-01 21:22:27,038 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x16985d9eecb00fc, negotiated timeout = 30000
+
+
+[INFO ] 2019-04-01 21:22:27,040 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-04-01 21:22:27,077 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=2280&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946747, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 21:22:27,119 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=2280&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946747, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 21:22:27,164 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=2280&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946747, urls: [dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, empty://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=2280&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946747, empty://192.168.25.1/com.serendipity.search.service.SearchService?application=kt-search-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=2280&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946747], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 21:22:27,495 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x49552dc8, /192.168.25.1:50235 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 21:22:27,496 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient DESKTOP-K7E88KT/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 21:22:27,637 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.serendipity.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=kt-search-web&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=2280&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1554124946747, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-01 21:22:27,924 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.serendipity.search.controller.SearchController.searchItemList(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-04-01 21:22:28,438 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 21:22:25 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 21:22:28,559 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Mon Apr 01 21:22:25 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-01 21:22:28,826 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'kt-search-web': initialization completed in 3870 ms

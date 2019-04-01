@@ -20,8 +20,10 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.serendipity.common.utils.CookieUtils;
+import com.serendipity.common.utils.E3Result;
 import com.serendipity.common.utils.JsonUtils;
 import com.serendipity.pojo.TbItem;
 import com.serendipity.service.ItemService;
@@ -31,7 +33,7 @@ public class CartController {
 
     @Autowired
     private ItemService itemService;
-    
+
     @Value("${COOKIE_CART_EXPIRE}")
     private Integer COOKIE_CART_EXPIRE;
 
@@ -64,9 +66,10 @@ public class CartController {
             // 把商品添加到商品列表
             cartList.add(tbItem);
         }
-        //写入cookie
-        CookieUtils.setCookie(request, response,"cart", JsonUtils.objectToJson(cartList),COOKIE_CART_EXPIRE,true);
-        //返回成功页面
+        // 写入cookie
+        CookieUtils.setCookie(request, response, "cart", JsonUtils.objectToJson(cartList),
+                COOKIE_CART_EXPIRE, true);
+        // 返回成功页面
         return "cartSuccess";
     }
 
@@ -85,5 +88,69 @@ public class CartController {
         // 把json转换成商品列表
         List<TbItem> list = JsonUtils.jsonToList(json, TbItem.class);
         return list;
+    }
+
+    /**
+     * 展示购物车列表
+     * 
+     * @param request
+     * @return
+     */
+    @RequestMapping("/cart/cart")
+    public String showCartList(HttpServletRequest request) {
+        // 从cookie中取购物车列表
+        List<TbItem> cartList = getCartListFromCookie(request);
+        // 把列表传递给页面
+        request.setAttribute("cartList", cartList);
+        // 返回视图逻辑
+        return "cart";
+    }
+
+    /**
+     * 更新购物车商品数量
+     */
+    @RequestMapping("/cart/update/num/{itemId}/{num}")
+    @ResponseBody
+    public E3Result updateCartNum(@PathVariable Long itemId, @PathVariable Integer num,
+            HttpServletRequest request, HttpServletResponse response) {
+        // 从cookie中取购物车列表
+        List<TbItem> cartList = getCartListFromCookie(request);
+        // 遍历商品列表找到对应的商品
+        for (TbItem tbItem : cartList) {
+            if (tbItem.getId().longValue() == itemId) {
+                // 更新数量
+                tbItem.setNum(num);
+                break;
+            }
+        }
+
+        // 把购物车列表写回cookie
+        CookieUtils.setCookie(request, response, "cart", JsonUtils.objectToJson(cartList),
+                COOKIE_CART_EXPIRE, true);
+        // 返回成功
+        return E3Result.ok();
+    }
+
+    /**
+     * 删除购物车商品
+     */
+    @RequestMapping("/cart/delete/{itemId}")
+    public String deleteCartItem(@PathVariable Long itemId, HttpServletRequest request,
+            HttpServletResponse response) {
+        // 从cookie中取购物车列表
+        List<TbItem> cartList = getCartListFromCookie(request);
+        // 遍历商品列表找到对应的商品
+        for (TbItem tbItem : cartList) {
+            if (tbItem.getId().longValue() == itemId) {
+                // 更新数量
+                cartList.remove(tbItem);
+                break;
+            }
+        }
+        //把购物车列表写入cookie
+        CookieUtils.setCookie(request, response, "cart", JsonUtils.objectToJson(cartList),
+                COOKIE_CART_EXPIRE, true);
+        return "redirect:/cart/cart.html";
+
     }
 }

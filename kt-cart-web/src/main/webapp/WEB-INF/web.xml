@@ -36,6 +36,10 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>kt-cart-web</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kt-cart-web</servlet-name>
+		<url-pattern>*.action</url-pattern>
 	</servlet-mapping>
 </web-app>
