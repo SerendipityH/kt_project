@@ -10889,3 +10889,828 @@ Looking for @ControllerAdvice: WebApplicationContext for namespace 'kt-search-we
 
 [INFO ] 2019-04-01 21:22:28,826 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
 FrameworkServlet 'kt-search-web': initialization completed in 3870 ms
+
+
+[INFO ] 2019-04-02 22:09:13,160 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-02 22:09:13,186 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Tue Apr 02 22:09:13 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-02 22:09:13,227 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-02 22:09:15,712 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-02 22:09:16,411 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-02 22:09:16,426 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-02 22:09:17,729 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=10156&side=provider&timeout=60000&timestamp=1554124935165, com.serendipity.sso.service.TokenService=empty://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=2328&side=provider&timeout=600000&timestamp=1554124874751, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=2328&side=provider&timeout=600000&timestamp=1554124874708, com.serendipity.search.service.SearchItemService=empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=10060&side=provider&timeout=60000&timestamp=1554124937113, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=2328&side=provider&timeout=600000&timestamp=1554124874230, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124925846, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124928224, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=10156&side=provider&timeout=60000&timestamp=1554124938867}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-02 22:09:17,858 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-02 22:09:17,984 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-02 22:09:17,985 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-02 22:09:17,985 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-02 22:09:17,986 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-02 22:09:17,986 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-02 22:09:17,986 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-02 22:09:17,987 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-02 22:09:17,987 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-02 22:09:17,988 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-02 22:09:17,989 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-02 22:09:17,989 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-02 22:09:17,990 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-02 22:09:17,990 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-02 22:09:17,990 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-02 22:09:17,991 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-02 22:09:17,992 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@2040e51
+
+
+[INFO ] 2019-04-02 22:09:18,192 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:09:39,201 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:09:40,315 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:10:01,328 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:10:02,430 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:10:23,433 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:10:24,534 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-02 22:10:53,708 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-02 22:10:53,730 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Tue Apr 02 22:10:53 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-02 22:10:53,753 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-02 22:10:54,091 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-02 22:10:54,183 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-02 22:10:54,188 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-02 22:10:54,434 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=10156&side=provider&timeout=60000&timestamp=1554124935165, com.serendipity.sso.service.TokenService=empty://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=2328&side=provider&timeout=600000&timestamp=1554124874751, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=2328&side=provider&timeout=600000&timestamp=1554124874708, com.serendipity.search.service.SearchItemService=empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=10060&side=provider&timeout=60000&timestamp=1554124937113, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=2328&side=provider&timeout=600000&timestamp=1554124874230, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124925846, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124928224, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=10156&side=provider&timeout=60000&timestamp=1554124938867}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-02 22:10:54,444 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-02 22:10:54,456 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-02 22:10:54,457 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-02 22:10:54,457 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-02 22:10:54,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-02 22:10:54,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-02 22:10:54,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-02 22:10:54,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-02 22:10:54,459 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-02 22:10:54,459 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-02 22:10:54,460 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-02 22:10:54,460 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-02 22:10:54,461 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-02 22:10:54,461 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-02 22:10:54,461 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-02 22:10:54,461 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-02 22:10:54,463 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@3d07eb8b
+
+
+[INFO ] 2019-04-02 22:10:54,484 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:11:15,489 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:11:16,595 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:11:37,598 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:11:38,701 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:11:59,701 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:12:00,804 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:12:21,806 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:12:22,909 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:12:43,913 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:12:45,014 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-02 22:14:45,834 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-02 22:14:45,895 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Tue Apr 02 22:14:45 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-02 22:14:45,966 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-02 22:14:46,487 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-02 22:14:46,668 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-02 22:14:46,680 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-02 22:14:47,144 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=10156&side=provider&timeout=60000&timestamp=1554124935165, com.serendipity.sso.service.TokenService=empty://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=2328&side=provider&timeout=600000&timestamp=1554124874751, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=2328&side=provider&timeout=600000&timestamp=1554124874708, com.serendipity.search.service.SearchItemService=empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=10060&side=provider&timeout=60000&timestamp=1554124937113, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=2328&side=provider&timeout=600000&timestamp=1554124874230, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124925846, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124928224, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=10156&side=provider&timeout=60000&timestamp=1554124938867}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-02 22:14:47,199 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-02 22:14:47,200 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-02 22:14:47,201 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-02 22:14:47,201 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-02 22:14:47,201 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-02 22:14:47,201 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-02 22:14:47,202 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-02 22:14:47,226 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-02 22:14:47,215 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-02 22:14:47,227 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-02 22:14:47,231 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-02 22:14:47,231 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-02 22:14:47,232 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-02 22:14:47,235 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-02 22:14:47,236 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-02 22:14:47,237 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-02 22:14:47,239 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@4ac09db3
+
+
+[INFO ] 2019-04-02 22:14:47,310 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:15:08,413 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:15:09,520 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:15:30,523 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:15:31,625 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:15:52,627 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:15:53,731 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:16:14,733 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:16:15,834 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:16:36,837 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:16:37,938 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-02 22:17:50,076 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-02 22:17:50,092 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Tue Apr 02 22:17:50 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-02 22:17:50,123 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-02 22:17:50,480 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-02 22:17:50,580 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-02 22:17:50,585 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-02 22:17:50,826 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=10156&side=provider&timeout=60000&timestamp=1554124935165, com.serendipity.sso.service.TokenService=empty://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=2328&side=provider&timeout=600000&timestamp=1554124874751, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=2328&side=provider&timeout=600000&timestamp=1554124874708, com.serendipity.search.service.SearchItemService=empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=10060&side=provider&timeout=60000&timestamp=1554124937113, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=2328&side=provider&timeout=600000&timestamp=1554124874230, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124925846, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124928224, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=10156&side=provider&timeout=60000&timestamp=1554124938867}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-02 22:17:50,837 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-02 22:17:50,849 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-02 22:17:50,850 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-02 22:17:50,850 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-02 22:17:50,850 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-02 22:17:50,851 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-02 22:17:50,851 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-02 22:17:50,851 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-02 22:17:50,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-02 22:17:50,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-02 22:17:50,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-02 22:17:50,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-02 22:17:50,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-02 22:17:50,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-02 22:17:50,854 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-02 22:17:50,854 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-02 22:17:50,855 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@2bb6efe7
+
+
+[INFO ] 2019-04-02 22:17:50,879 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:18:11,885 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:18:12,995 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:18:33,996 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:18:35,098 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-02 22:45:26,105 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'kt-search-web': initialization started
+
+
+[INFO ] 2019-04-02 22:45:26,127 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'kt-search-web-servlet': startup date [Tue Apr 02 22:45:26 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-02 22:45:26,161 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-02 22:45:26,436 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-02 22:45:26,550 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-02 22:45:26,555 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-02 22:45:26,828 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\gqh\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.serendipity.search.service.SearchService=empty://192.168.25.1:20882/com.serendipity.search.service.SearchService?anyhost=true&application=kt-search&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.search.service.SearchService&methods=search&pid=10060&side=provider&timeout=60000&timestamp=1554124940156, com.serendipity.content.service.ContentCategoryService=empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 empty://192.168.25.1/com.serendipity.content.service.ContentCategoryService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124946032 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentCategoryService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentCategoryService&methods=addContentCategory,getContentCatList&pid=10156&side=provider&timeout=60000&timestamp=1554124935165, com.serendipity.sso.service.TokenService=empty://192.168.25.1:20883/com.serendipity.sso.service.TokenService?anyhost=true&application=kt-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.serendipity.sso.service.TokenService&methods=getUserByToken&pid=2328&side=provider&timeout=600000&timestamp=1554124874751, com.serendipity.sso.service.LoginService=empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 empty://192.168.25.1/com.serendipity.sso.service.LoginService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124923430 dubbo://192.168.25.1:20883/com.serendipity.sso.service.LoginService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.LoginService&methods=userLogin&pid=2328&side=provider&timeout=600000&timestamp=1554124874708, com.serendipity.search.service.SearchItemService=empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 empty://192.168.25.1/com.serendipity.search.service.SearchItemService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947566 dubbo://192.168.25.1:20882/com.serendipity.search.service.SearchItemService?anyhost=true&application=kt-search&dubbo=2.5.3&interface=com.serendipity.search.service.SearchItemService&methods=importAllItems&pid=10060&side=provider&timeout=60000&timestamp=1554124937113, com.serendipity.sso.service.RegisterService=empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 empty://192.168.25.1/com.serendipity.sso.service.RegisterService?application=kt-sso-web&category=routers&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=7944&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124929400 dubbo://192.168.25.1:20883/com.serendipity.sso.service.RegisterService?anyhost=true&application=kt-sso&dubbo=2.5.3&interface=com.serendipity.sso.service.RegisterService&methods=checkData,register&pid=2328&side=provider&timeout=600000&timestamp=1554124874230, com.serendipity.service.ItemService=empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 empty://192.168.25.1/com.serendipity.service.ItemService?application=kt-cart-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,getItemList,addItem,getItemDescById&pid=14540&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554126059430 dubbo://192.168.25.1:20880/com.serendipity.service.ItemService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemService&methods=geTbItemById,addItem,getItemList,getItemDescById&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124925846, com.serendipity.service.ItemCatService=empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 empty://192.168.25.1/com.serendipity.service.ItemCatService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947328 dubbo://192.168.25.1:20880/com.serendipity.service.ItemCatService?anyhost=true&application=kt-manager&dubbo=2.5.3&interface=com.serendipity.service.ItemCatService&methods=getItemCatlist&pid=11636&revision=0.0.1-SNAPSHOT&side=provider&timeout=60000&timestamp=1554124928224, com.serendipity.content.service.ContentService=empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=configurators&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 empty://192.168.25.1/com.serendipity.content.service.ContentService?application=kt-manager-web&category=routers&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=1964&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1554124947263 dubbo://192.168.25.1:20881/com.serendipity.content.service.ContentService?anyhost=true&application=kt-content&dubbo=2.5.3&interface=com.serendipity.content.service.ContentService&methods=getContentListByCid,addContent&pid=10156&side=provider&timeout=60000&timestamp=1554124938867}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-02 22:45:26,838 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-02 22:45:26,851 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-02 22:45:26,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-K7E88KT
+
+
+[INFO ] 2019-04-02 22:45:26,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_201
+
+
+[INFO ] 2019-04-02 22:45:26,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-02 22:45:26,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=E:\develop\java\jdk1.8\jre
+
+
+[INFO ] 2019-04-02 22:45:26,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=C:\Users\gqh\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-04-02 22:45:26,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=E:\develop\java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/develop/java/jre1.8/bin/server;E:/develop/java/jre1.8/bin;E:/develop/java/jre1.8/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\develop\Java\Jdk1.8\bin;E:\develop\Java\Jdk1.8\jre\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\git\Git\cmd;E:\develop\node.js\;C:\Users\gqh\AppData\Local\Microsoft\WindowsApps;C:\Users\gqh\AppData\Roaming\npm;C:\Users\gqh\Desktop;;.
+
+
+[INFO ] 2019-04-02 22:45:26,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\gqh\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-02 22:45:26,854 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-02 22:45:26,854 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-02 22:45:26,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-02 22:45:26,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-02 22:45:26,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=gqh
+
+
+[INFO ] 2019-04-02 22:45:26,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\gqh
+
+
+[INFO ] 2019-04-02 22:45:26,856 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\gqh\git\kt_project\kt-search-web
+
+
+[INFO ] 2019-04-02 22:45:26,857 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@27ba532b
+
+
+[INFO ] 2019-04-02 22:45:26,885 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:45:47,891 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:45:48,996 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:46:09,999 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:46:11,102 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:46:32,105 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:46:33,207 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:46:54,214 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:46:55,316 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:47:16,317 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:47:17,418 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:47:38,421 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:47:39,522 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:48:00,524 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:48:01,626 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:48:22,631 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:48:23,735 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:48:44,739 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:48:45,840 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-04-02 22:49:06,844 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-04-02 22:49:07,945 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)

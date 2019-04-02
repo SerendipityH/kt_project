@@ -1,8 +1,12 @@
-package com.serendipity.cart.serviceImpl;
+package com.serendipity.cart.service.Impl;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import com.serendipity.cart.service.CartService;
 import com.serendipity.common.jedis.JedisClient;
@@ -10,7 +14,7 @@ import com.serendipity.common.utils.E3Result;
 import com.serendipity.common.utils.JsonUtils;
 import com.serendipity.mapper.TbItemMapper;
 import com.serendipity.pojo.TbItem;
-import com.serendipity.pojo.TbUser;
+
 
 /**
  * 购物车处理
@@ -18,6 +22,7 @@ import com.serendipity.pojo.TbUser;
  * @author gqh
  *
  */
+@Service
 public class CartServiceImpl implements CartService {
     @Autowired
     private JedisClient jedisClient;
@@ -57,6 +62,60 @@ public class CartServiceImpl implements CartService {
         }
         // 添加到购物车
         jedisClient.hset(REDIS_CART_PRE + ":" + userId, itemId + "", JsonUtils.objectToJson(item));
+        return E3Result.ok();
+    }
+
+    @Override
+    public E3Result mergeCart(long userId, List<TbItem> itemList) {
+        // TODO Auto-generated method stub
+        // 遍历商品列表
+        // 把列表添加到购物车
+        // 判断购物车中是否有此商品
+        // 如果有，数量相加
+        // 如果没有添加新的商品
+        for (TbItem tbItem : itemList) {
+            addCart(userId, tbItem.getId(), tbItem.getNum());
+        }
+        // 返回成功
+
+        return E3Result.ok();
+    }
+
+    @Override
+    public List<TbItem> getCartList(long userId) {
+        // TODO Auto-generated method stub
+        //根据用户id查询购物车列表
+        List<String> jsonList = jedisClient.hvals(REDIS_CART_PRE + ":" + userId);
+        List<TbItem> itemList=new ArrayList<TbItem>();
+        for (String string : jsonList) {
+            //创建一个TbItem对象
+            TbItem item = JsonUtils.jsonToPojo(string, TbItem.class);
+            //添加到列表
+            itemList.add(item);
+            
+        }
+        return itemList;
+    }
+
+    @Override
+    public E3Result updateCartNum(long userId, long itemId, int num) {
+        // TODO Auto-generated method stub
+        //从redis中取商品信息
+        String json = jedisClient.hget(REDIS_CART_PRE + ":" + userId, itemId + "");
+        //更新商品数量
+        TbItem tbItem = JsonUtils.jsonToPojo(json, TbItem.class);
+        tbItem.setNum(num);
+        // 写回redis
+        jedisClient.hset(REDIS_CART_PRE + ":" + userId, itemId + "",
+                JsonUtils.objectToJson(tbItem));
+        return E3Result.ok();
+    }
+
+    @Override
+    public E3Result deleteCartItem(long userId, long itemId) {
+        // TODO Auto-generated method stub
+        //删除购物车商品
+        jedisClient.hdel(REDIS_CART_PRE + ":" + userId, itemId + "");
         return E3Result.ok();
     }
 

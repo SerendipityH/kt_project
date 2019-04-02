@@ -114,9 +114,27 @@ public class CartController {
      * @return
      */
     @RequestMapping("/cart/cart")
-    public String showCartList(HttpServletRequest request) {
+    public String showCartList(HttpServletRequest request, HttpServletResponse response) {
         // 从cookie中取购物车列表
         List<TbItem> cartList = getCartListFromCookie(request);
+        // 判断用户是否为登录状态
+        TbUser user = (TbUser) request.getAttribute("user");
+        // 如果是登录状态
+        if (user != null) {
+            // 从cookie中取购物车列表
+            // 如果不为空，把cookie中的购物车商品和服务端的购物车商品合并。
+            cartService.mergeCart(user.getId(), cartList);
+            // 把cookie中的购物车删除
+            CookieUtils.deleteCookie(request, response, "cart");
+            // 从服务端取购物车列表
+            cartList = cartService.getCartList(user.getId());
+
+        }
+
+
+
+        // 未登录状态
+
         // 把列表传递给页面
         request.setAttribute("cartList", cartList);
         // 返回视图逻辑
@@ -130,6 +148,12 @@ public class CartController {
     @ResponseBody
     public E3Result updateCartNum(@PathVariable Long itemId, @PathVariable Integer num,
             HttpServletRequest request, HttpServletResponse response) {
+        // 判断用户是否为登录状态
+        TbUser user = (TbUser) request.getAttribute("user");
+        if (user != null) {
+            cartService.updateCartNum(user.getId(), itemId, num);
+            return E3Result.ok();
+        }
         // 从cookie中取购物车列表
         List<TbItem> cartList = getCartListFromCookie(request);
         // 遍历商品列表找到对应的商品
@@ -154,6 +178,12 @@ public class CartController {
     @RequestMapping("/cart/delete/{itemId}")
     public String deleteCartItem(@PathVariable Long itemId, HttpServletRequest request,
             HttpServletResponse response) {
+        // 判断用户是否为登录状态
+        TbUser user = (TbUser) request.getAttribute("user");
+        if (user != null) {
+            cartService.deleteCartItem(user.getId(), itemId);
+            return "redirect:/cart/cart.html";
+        }
         // 从cookie中取购物车列表
         List<TbItem> cartList = getCartListFromCookie(request);
         // 遍历商品列表找到对应的商品
