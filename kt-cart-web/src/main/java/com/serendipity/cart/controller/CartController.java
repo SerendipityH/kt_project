@@ -24,6 +24,7 @@ import com.serendipity.common.utils.JsonUtils;
 import com.serendipity.pojo.TbItem;
 import com.serendipity.pojo.TbUser;
 import com.serendipity.service.ItemService;
+
 /**
  * 购物车处理Controller
  * 
@@ -38,7 +39,7 @@ public class CartController {
 
     @Value("${COOKIE_CART_EXPIRE}")
     private Integer COOKIE_CART_EXPIRE;
-    
+
     @Autowired
     private CartService cartService;
 
@@ -50,12 +51,12 @@ public class CartController {
         TbUser user = (TbUser) request.getAttribute("user");
         // 如果是登录状态
         if (user != null) {
-            //保存到服务端
+            // 保存到服务端
             cartService.addCart(user.getId(), itemId, num);
-            //返回逻辑视图
+            // 返回逻辑视图
             return "cartSuccess";
         }
-       
+
         // 从cookie中取购物车列表
         List<TbItem> cartList = getCartListFromCookie(request);
         // 判断商品在商品列表中是否存在
