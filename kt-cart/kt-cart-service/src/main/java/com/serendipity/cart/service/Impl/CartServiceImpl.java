@@ -84,15 +84,15 @@ public class CartServiceImpl implements CartService {
     @Override
     public List<TbItem> getCartList(long userId) {
         // TODO Auto-generated method stub
-        //根据用户id查询购物车列表
+        // 根据用户id查询购物车列表
         List<String> jsonList = jedisClient.hvals(REDIS_CART_PRE + ":" + userId);
-        List<TbItem> itemList=new ArrayList<TbItem>();
+        List<TbItem> itemList = new ArrayList<TbItem>();
         for (String string : jsonList) {
-            //创建一个TbItem对象
+            // 创建一个TbItem对象
             TbItem item = JsonUtils.jsonToPojo(string, TbItem.class);
-            //添加到列表
+            // 添加到列表
             itemList.add(item);
-            
+
         }
         return itemList;
     }
@@ -100,9 +100,9 @@ public class CartServiceImpl implements CartService {
     @Override
     public E3Result updateCartNum(long userId, long itemId, int num) {
         // TODO Auto-generated method stub
-        //从redis中取商品信息
+        // 从redis中取商品信息
         String json = jedisClient.hget(REDIS_CART_PRE + ":" + userId, itemId + "");
-        //更新商品数量
+        // 更新商品数量
         TbItem tbItem = JsonUtils.jsonToPojo(json, TbItem.class);
         tbItem.setNum(num);
         // 写回redis
@@ -114,7 +114,7 @@ public class CartServiceImpl implements CartService {
     @Override
     public E3Result deleteCartItem(long userId, long itemId) {
         // TODO Auto-generated method stub
-        //删除购物车商品
+        // 删除购物车商品
         jedisClient.hdel(REDIS_CART_PRE + ":" + userId, itemId + "");
         return E3Result.ok();
     }

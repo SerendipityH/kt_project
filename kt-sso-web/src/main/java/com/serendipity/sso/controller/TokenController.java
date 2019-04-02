@@ -31,7 +31,7 @@ public class TokenController {
      * (StringUtils.isNotBlank(callback)) { // 把结果封装成一个js语句响应 return callback + "(" +
      * JsonUtils.objectToJson(result) + ");"; } return JsonUtils.objectToJson(result); }
      */
-    @RequestMapping(value="/user/token/{token}")
+    @RequestMapping(value = "/user/token/{token}")
     @ResponseBody
     public Object getUserByToken(@PathVariable String token, String callback) {
         E3Result result = tokenService.getUserByToken(token);

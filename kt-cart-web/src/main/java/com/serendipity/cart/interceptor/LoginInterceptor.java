@@ -38,7 +38,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 3.取到token,需要调用sso系统的服务，根据token取用户信息
         E3Result e3Result = tokenService.getUserByToken(token);
         // 4.没有取到用户信息。登录过期，直接放行
-        if(e3Result.getStatus()!=200) {
+        if (e3Result.getStatus() != 200) {
             return true;
         }
         // 5.取到用户信息，登录状态
