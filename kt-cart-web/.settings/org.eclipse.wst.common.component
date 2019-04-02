@@ -19,6 +19,9 @@
         <dependent-module archiveName="kt-manager-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kt-manager-interface/kt-manager-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="kt-sso-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kt-sso-interface/kt-sso-interface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="kt-cart-web"/>
         <property name="java-output-path" value="/kt-cart-web/target/classes"/>
     </wb-module>

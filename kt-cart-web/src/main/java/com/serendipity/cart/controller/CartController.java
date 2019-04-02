@@ -12,22 +12,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.serendipity.cart.service.CartService;
+import com.serendipity.common.utils.CookieUtils;
+import com.serendipity.common.utils.E3Result;
+import com.serendipity.common.utils.JsonUtils;
+import com.serendipity.pojo.TbItem;
+import com.serendipity.pojo.TbUser;
+import com.serendipity.service.ItemService;
 /**
  * 购物车处理Controller
  * 
  * @author gqh
  *
  */
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.serendipity.common.utils.CookieUtils;
-import com.serendipity.common.utils.E3Result;
-import com.serendipity.common.utils.JsonUtils;
-import com.serendipity.pojo.TbItem;
-import com.serendipity.service.ItemService;
-
 @Controller
 public class CartController {
 
@@ -36,10 +38,24 @@ public class CartController {
 
     @Value("${COOKIE_CART_EXPIRE}")
     private Integer COOKIE_CART_EXPIRE;
+    
+    @Autowired
+    private CartService cartService;
 
     @RequestMapping("/cart/add/{itemId}")
     public String addCart(@PathVariable Long itemId, @RequestParam(defaultValue = "1") Integer num,
             HttpServletRequest request, HttpServletResponse response) {
+
+        // 判断用户是否登录
+        TbUser user = (TbUser) request.getAttribute("user");
+        // 如果是登录状态
+        if (user != null) {
+            //保存到服务端
+            cartService.addCart(user.getId(), itemId, num);
+            //返回逻辑视图
+            return "cartSuccess";
+        }
+       
         // 从cookie中取购物车列表
         List<TbItem> cartList = getCartListFromCookie(request);
         // 判断商品在商品列表中是否存在
@@ -147,7 +163,7 @@ public class CartController {
                 break;
             }
         }
-        //把购物车列表写入cookie
+        // 把购物车列表写入cookie
         CookieUtils.setCookie(request, response, "cart", JsonUtils.objectToJson(cartList),
                 COOKIE_CART_EXPIRE, true);
         return "redirect:/cart/cart.html";
