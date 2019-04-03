@@ -21,11 +21,17 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	
-	
+	<!-- 配置拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.serendipity.order.interceptor.LoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="kt-order-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
-	<!-- <dubbo:reference interface="com.serendipity.content.service.ContentService" id="contentService" />
-	 -->
+	<dubbo:reference interface="com.serendipity.cart.service.CartService" id="cartService" />
+	<dubbo:reference interface="com.serendipity.sso.service.TokenService" id="tokenService" />
+	<dubbo:reference interface="com.serendipity.order.service.OrderService" id="orderService" />
 </beans>
